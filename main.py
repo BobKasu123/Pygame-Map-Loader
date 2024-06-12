@@ -1,6 +1,6 @@
 import pygame
 
-Class MapLoader():
+Class MapLoader:
   def load_file_map(screen, file: str, images: dict, x: int, y: int):
     map = file.split("\n")
     x = x
