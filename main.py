@@ -7,7 +7,7 @@ import pygame
 # So you can use something like 0 to leave spaces (if u want)
 
 class MapLoader:
-  def load_file_map(screen, file: str, images: dict, x: int, y: int, width: int, height: int):
+  def load_file_map(self, screen, file: str, images: dict, x: int, y: int, width: int, height: int):
     f = open("file", "r")
     map = file.readlines().split("\n")
     if len(map) > 0:
@@ -23,7 +23,7 @@ class MapLoader:
           screen.blit(pygame.transform.scale(pygame.image.load(images[img_num]), (width, height)), (x, y))
         x += width
           
-  def load_map(screen, map: list, images: dict, x, y, width: int, height: int):
+  def load_map(self, screen, map: list, images: dict, x, y, width: int, height: int):
     if len(map) > 0:
       for row in map:
         for int(tile), img_num in zip(row, images):
