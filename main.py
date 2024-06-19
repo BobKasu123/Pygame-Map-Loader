@@ -2,7 +2,7 @@ import pygame
 
 # Fixed some stuff
 
-Class MapLoader:
+class MapLoader:
   def load_file_map(screen, file: str, images: dict, x: int, y: int, width: int, height: int):
     map = file.split("\n")
     if len(file) > 0:
@@ -17,7 +17,7 @@ Class MapLoader:
         if tile == img_num:
           screen.blit(pygame.transform.scale(pygame.image.load(images[img_num]), (width, height)), (x, y))
           
-  def load_map(screen, map: list, images: dict, x, y):
+  def load_map(screen, map: list, images: dict, x, y, width: int, height: int):
     if len(map) > 0:
       for row in map:
         for tile, img_num in zip(row, images):
@@ -29,3 +29,5 @@ Class MapLoader:
       for tile, img_num in zip(map, images):
         if tile == img_num:
           screen.blit(pygame.transform.scale(pygame.image.load(images[img_num]), (width, height)), (x, y))
+        x += width
+        
