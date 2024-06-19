@@ -14,8 +14,6 @@ Class MapLoader:
       for tile, img_num in zip(map, images):
         if tile == img_num:
           screen.blit(pygame.image.load(images[img_num]), (x, y))
-        else:
-          continue
           
   def load_map(screen, map: list, images: dict, x, y):
     if len(map) > 0:
@@ -29,6 +27,3 @@ Class MapLoader:
       for tile, img_num in zip(map, images):
         if tile == img_num:
           screen.blit(pygame.image.load(images[img_num]), (x, y))
-        else:
-          continue
-                                         
