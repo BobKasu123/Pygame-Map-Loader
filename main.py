@@ -2,7 +2,7 @@ import pygame
 
 # Fixed some stuff
 # To use: make a dictionary with integer keys and values of only the paths of an image
-# Then, make a list of the numbers you defined in the dictionary. this'll load the map using the numbers in the dict
+# Then, make a list of the numbers you defined in the dictionary. this'll load the map using the numbers in the list
 # If the number isnt defined in the dict itll automatically skip the number
 # So you can use something like 0 to leave spaces (if u want)
 
