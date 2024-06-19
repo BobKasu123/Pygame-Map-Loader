@@ -10,7 +10,7 @@ class MapLoader:
   def load_file_map(screen, file: str, images: dict, x: int, y: int, width: int, height: int):
     f = open("file", "r")
     map = file.readlines().split("\n")
-    if len(file) > 0:
+    if len(map) > 0:
       for row in map:
         for tile, img_num in zip(row, images):
           if tile == img_num:
