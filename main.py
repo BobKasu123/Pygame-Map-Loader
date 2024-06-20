@@ -9,7 +9,7 @@ import pygame
 class MapLoader:
   def load_file_map(self, screen, file: str, images: dict, x: int, y: int, width: int, height: int):
     f = open("file", "r")
-    map = file.readlines().split("\n")
+    map = file.read().split("\n")
     if len(map) > 0:
       for row in map:
         for int(tile), img_num in zip(row, images):
