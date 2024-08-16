@@ -13,13 +13,13 @@ class MapLoader:
     if len(map) > 0:
       for row in map:
         for int(tile), img_num in zip(row, images):
-          if tile == img_num:
+          if tile in images:
             screen.blit(pygame.transform.scale(pygame.image.load(images[img_num]), (width, height)), (x, y))
           x += width
         y += height
     else:
       for int(tile), img_num in zip(map, images):
-        if tile == img_num:
+        if tile in images:
           screen.blit(pygame.transform.scale(pygame.image.load(images[img_num]), (width, height)), (x, y))
         x += width
           
@@ -27,13 +27,13 @@ class MapLoader:
     if len(map) > 0:
       for row in map:
         for int(tile), img_num in zip(row, images):
-          if num == img_num:
+          if num in images:
             screen.blit(pygame.transform.scale(pygame.image.load(images[img_num]), (width, height)), (x, y))
           x += width
         y += height
     else:
       for int(tile), img_num in zip(map, images):
-        if tile == img_num:
+        if tile in images:
           screen.blit(pygame.transform.scale(pygame.image.load(images[img_num]), (width, height)), (x, y))
         x += width
         
